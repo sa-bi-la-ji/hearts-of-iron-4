@@ -1,0 +1,89 @@
+ability = {
+    cat_attack = {
+        name = "猫猫冲击"
+        desc = "哈气！对敌人造成大量伤害。"
+
+        sound_effect = command_power_ability_offensive
+
+        type = army_leader
+
+        allowed = {
+            is_leading_army_group = no
+            is_border_war = no
+            owner = {
+                original_tag = GER
+
+            }
+
+        }
+
+        ai_will_do = {
+            factor = -1
+			modifier = {
+				FROM = {
+					has_war_support > 0.1
+					command_power > 1.5
+				}
+				check_variable = { num_units_offensive_combats > 6 }
+				
+				set_temp_variable = { temp = avg_offensive_combat_status }
+				check_variable = { temp > 0.45 }
+				check_variable = { ai_random > temp }
+				
+				add = 2
+            }
+        }
+        cost = 0.05
+        duration = 240
+    
+        one_time_effect = {
+            add_temporary_buff_to_units = {
+                combat_offense = 0.5
+                combat_breakthrough = 0.5
+                combat_defense = 0.5
+                combat_entrenchment = 0.5
+                org_damage_multiplier = -1.0
+                str_damage_multiplier = -0.5
+                days = 10
+            }
+        }
+    }
+    lcx_attck = {
+        name = "lcx指挥送死"
+        desc = "不知道为什么长官让我们缴枪投降"
+
+        sound_effect = command_power_ability_offensive
+
+        type = army_leader
+
+        allowed = {
+            is_leading_army_group = no
+            is_border_war = no
+            owner = {
+                original_tag = GER
+
+            }
+
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+        cost = 0.1
+        duration = 240
+    
+        one_time_effect = {
+            add_temporary_buff_to_units = {
+                combat_offense = -0.99
+                combat_breakthrough = -0.99
+                combat_defense = -0.99
+                combat_entrenchment = -0.99
+                org_damage_multiplier = 100
+                str_damage_multiplier = 100
+                days = 10
+                cannot_retreat_while_attacking = 1.0
+                cannot_retreat_while_defending = 1.0
+            }
+        }
+    }
+}

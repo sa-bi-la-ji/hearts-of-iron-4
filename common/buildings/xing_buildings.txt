@@ -1,0 +1,23 @@
+buildings = {
+    撤硕 = {
+        base_cost = 10
+        show_modifier = yes
+        allied_build = yes
+        level_cap = {
+            state_max = 99
+        }
+        country_modifiers = {
+            modifiers = {
+                stability_weekly = 0.001
+                war_support_weekly = 0.001
+                weekly_manpower = 10
+                production_speed_buildings_factor = 0.01
+            }
+        }
+        state_modifiers = {
+            local_building_slots_factor = 0.01
+        }
+        local_resources_oil = 1
+        local_resources_rubber = 1
+    }
+}

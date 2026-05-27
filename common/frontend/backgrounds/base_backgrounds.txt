@@ -1,0 +1,29 @@
+# Database for all the backgrounds in the game example:
+# 游戏中所有背景的数据库示例：
+# name_of_dds_file = { (The dds file needs to be stored in the gfx/loadingscreens folder)
+# name_of_dds_file = { (dds 文件需要存放在 gfx/loadingscreens 文件夹中)
+# dlc_allowed = (optional) which Dlc enables this background
+# dlc_allowed = (可选) 哪个 DLC 启用此背景
+# locale = (optional) The default background will be decided by latest dlc, if there is a locale set then it will try to best match the default background to 
+# locale = (可选) 默认背景由最新 DLC 决定，如果设置了 locale，则会尝试使默认背景与语言最匹配
+# gfx = (optional) on default we override the GFX_frontend_bg_basic, so only set if you want a different resolution or effects
+# gfx = (可选) 默认情况下我们覆盖 GFX_frontend_bg_basic，所以只有在需要不同分辨率或特效时才设置它
+# }
+
+#IMPORTANT
+# 重要提示
+# You will also need to create a GFX for the small icons to appear,and it should be named GFX_name_small. We have support for 1 small image to show without
+# 你还需要为小图标创建一个 GFX，名称应为 GFX_name_small。我们支持显示 1 个小图像而不必重新创建它，
+# the need to recreate the it, however that is not scalable. So if you want to have more images / make your mod compatible with other mods you have to add it
+# 但这不是可扩展的。因此，如果你想添加更多图像 / 使你的模组与其他模组兼容，就必须添加它
+
+
+load_1 = {}
+load_2 = {}
+load_3 = {}
+load_4 = {}
+load_5 = {}
+load_6 = {}
+load_7 = {}
+load_8 = {}
+load_9 = {}
