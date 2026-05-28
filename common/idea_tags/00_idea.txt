@@ -1,10 +1,5 @@
 idea_categories = {
-	# ledger can be define for idea > idea slot > idea category
-	# first one overrides the others
-	# multiple ledgers can be defined, in that case will show on all
-	# possible values : army, air, navy, military (shows on all military ledgers), civilian, all (shows up everywhere), hidden (does not show up)
-	
-	
+
 	hidden_ideas = {
 		hidden = yes
 	
@@ -27,6 +22,20 @@ idea_categories = {
 		slot = mobilization_laws
 		slot = trade_laws
 		slot = economy
+		slot = industrial_concern
+		slot = industrial_concern
+		slot = industrial_concern
+
+		ledger = civilian
+		
+		cost = 150
+		removal_cost = 0
+	}
+
+	guwen_1 = {
+		character_slot = political_advisor
+		character_slot = political_advisor
+		character_slot = political_advisor
 		character_slot = political_advisor
 		character_slot = political_advisor
 		character_slot = political_advisor
@@ -36,13 +45,13 @@ idea_categories = {
 		cost = 150
 		removal_cost = 0
 	}
-	
-	research_production = {
+
+	lilunjia = {
 		slot = tank_manufacturer
 		slot = naval_manufacturer
 		slot = aircraft_manufacturer
 		slot = materiel_manufacturer
-		slot = industrial_concern
+		character_slot = theorist
 		character_slot = theorist
 
 		ledger = civilian
@@ -51,10 +60,24 @@ idea_categories = {
 		removal_cost = 0
 	}
 	
-	military_staff = {
+	lujunjiangling = {
 		character_slot = army_chief 
-		character_slot = navy_chief 
+		character_slot = army_chief
+		character_slot = navy_chief
+		character_slot = navy_chief
 		character_slot = air_chief
+		character_slot = air_chief
+		
+		ledger = invalid # must be overridden
+		
+		cost = 150
+		removal_cost = 0
+	}
+	
+	zongsiling = {
+		character_slot = high_command
+		character_slot = high_command
+		character_slot = high_command
 		character_slot = high_command
 		character_slot = high_command
 		character_slot = high_command

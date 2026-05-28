@@ -5,4 +5,5 @@ tags={
 	"Translation"
 }
 supported_version="1.18.*"
+path="E:/SteamLibrary/steamapps/workshop/content/394360/698748356"
 remote_file_id="698748356"
