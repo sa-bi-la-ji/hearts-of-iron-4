@@ -4,6 +4,6 @@ picture="xing.png"
 tags={
 	"Translation"
 }
-supported_version="1.18.*"
+supported_version="1.19.*"
 path="E:/SteamLibrary/steamapps/workshop/content/394360/698748356"
 remote_file_id="698748356"
