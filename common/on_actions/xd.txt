@@ -1,0 +1,944 @@
+on_actions = {
+    on_startup = {
+        effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
+            #if = {
+            #    limit = {
+            #        SOV = {
+            #            is_ai = yes
+            #        }
+            #    }
+            #    SOV = {
+            #        add_dynamic_modifier = {
+            #            modifier = IAR_SOV_Fight_for_Mother_Russia
+            #        }
+            #        set_variable = { #SOV_resistance_damage_to_garrison_on_our_occupied_states = #0 }
+            #        set_variable = { #SOV_resistance_growth_on_our_occupied_states = 0 }
+            #        set_variable = { SOV_resistance_activity = 0 }
+            #        set_variable = { SOV_production_speed_buildings_factor = 0 }
+            #        set_variable = { SOV_consumer_goods_factor = 0 }
+            #        set_variable = { SOV_industrial_capacity_factory = 0 }
+            #        set_variable = { SOV_army_core_attack_factor = 0 }
+            #        set_variable = { SOV_army_core_defence_factor = 0 }
+            #        set_variable = { SOV_army_attack_factor = 0 }
+            #        set_variable = { SOV_army_defence_factor = 0 }
+            #        set_variable = { SOV_breakthrough_factor = 0 }
+            #        set_variable = { SOV_army_org_factor = 0 }
+            #        set_variable = { SOV_army_org_regain = 0 }
+            #        set_variable = { SOV_army_strength_factor = 0 }
+            #        set_variable = { sov_surrender_limit = 0 }
+            #    }
+            #}
+
+            #if = {
+            #    limit = {
+            #        USA = {
+            #            is_ai = yes
+            #        }
+            #    }
+            #    USA = {
+            #        add_dynamic_modifier = {
+            #            modifier = IAR_USA_Home_of_Freedom
+            #        }
+            #        set_variable = { #USA_resistance_damage_to_garrison_on_our_occupied_states = #0 }
+            #        set_variable = { #USA_resistance_growth_on_our_occupied_states = 0 }
+            #        set_variable = { USA_resistance_activity = 0 }
+            #        set_variable = { USA_production_speed_buildings_factor = 0 }
+            #        set_variable = { USA_consumer_goods_factor = 0 }
+            #        set_variable = { USA_industrial_capacity_factory = 0 }
+            #        set_variable = { USA_army_core_attack_factor = 0 }
+            #        set_variable = { USA_army_core_defence_factor = 0 }
+            #        set_variable = { USA_army_attack_factor = 0 }
+            #        set_variable = { USA_army_defence_factor = 0 }
+            #        set_variable = { USA_breakthrough_factor = 0 }
+            #        set_variable = { USA_army_org_factor = 0 }
+            #        set_variable = { USA_army_org_regain = 0 }
+            #        set_variable = { USA_army_strength_factor = 0 }
+            #        set_variable = { USA_surrender_limit = 0 }
+            #    }
+            #}
+
+            #if = {
+            #    limit = {
+            #        ENG = {
+            #            is_ai = yes
+            #        }
+            #    }
+            #    ENG = {
+            #        add_dynamic_modifier = {
+            #            modifier = IAR_ENG_Sun_Never_Set
+            #        }
+            #        set_variable = { #ENG_resistance_damage_to_garrison_on_our_occupied_states = #0 }
+            #        set_variable = { #ENG_resistance_growth_on_our_occupied_states = 0 }
+            #        set_variable = { ENG_resistance_activity = 0 }
+            #        set_variable = { ENG_production_speed_buildings_factor = 0 }
+            #        set_variable = { ENG_consumer_goods_factor = 0 }
+            #        set_variable = { ENG_industrial_capacity_factory = 0 }
+            #        set_variable = { ENG_army_core_attack_factor = 0 }
+            #        set_variable = { ENG_army_core_defence_factor = 0 }
+            #        set_variable = { ENG_army_attack_factor = 0 }
+            #        set_variable = { ENG_army_defence_factor = 0 }
+            #        set_variable = { ENG_breakthrough_factor = 0 }
+            #        set_variable = { ENG_army_org_factor = 0 }
+            #        set_variable = { ENG_army_org_regain = 0 }
+            #        set_variable = { ENG_army_strength_factor = 0 }
+            #        set_variable = { ENG_surrender_limit = 0 }
+            #    }
+            #}
+
+            GER = {
+                add_ideas = wilhelm_canaris
+                country_event = { days = 1 id = zhuxian.3 }
+            }
+            every_country = {
+                set_rule = {
+                    can_send_volunteers = yes
+                }
+                
+            }
+        }
+	}
+
+     on_startup = {
+        effect = {
+            every_country = {
+                limit = {
+                    OR = {
+                        original_tag = GER
+                        original_tag = ITA
+                        original_tag = CHI
+                        original_tag = HUN
+                        original_tag = ROM
+                        original_tag = BUL
+                        original_tag = FIN
+                        original_tag = ARG               
+                    }   
+                    is_ai = no
+                }   
+                country_event = IAR_AXIS_NATION.1
+            }
+        }
+	}
+
+    #on_monthly_SOV = {
+    #    effect = {
+    #        if = {
+    #            limit = {
+    #                SOV = {
+    #                    is_ai = yes
+    #                }
+    #            }
+    #            SOV = {
+    #                #给工厂产出debuff+建造速度debuff 上限35%
+    #                set_temp_variable = {
+    #                    SOV_surrender_progress_1 = SOV.surrender_progress
+    #                }
+    #                #核心领土攻防+抵抗buff 上限15%
+    #                set_temp_variable = {
+    #                    SOV_surrender_progress_2 = SOV.surrender_progress
+    #                }
+    #                #投降度越高，攻防越低 上限10%
+    #                set_temp_variable = {
+    #                    SOV_surrender_progress_3 = SOV.surrender_progress
+    #                }
+    #
+    #                #突破单算 是加成，最高给个10%
+    #                set_temp_variable = {
+    #                    SOV_surrender_progress_4 = SOV.surrender_progress
+    #                }
+    #
+    #                #组织度和组织度恢复速度是苏联伤亡 大概乘0.0001应该不会超标（反正#是减的） casualties_k
+    #                set_temp_variable = {
+    #                    SOV_casualties_k_1 = SOV.casualties_k
+    #                }
+    #
+    #                #打满投降得整大点，不然打个几M投降倾向爆了那逆天了
+    #                set_temp_variable = {
+    #                    SOV_casualties_k_2 = SOV.casualties_k
+    #                }
+    #
+    #                #HP是苏联与敌人整体实力之比 乘0.05差不多 1000*0.00001(你妈的乘#不生效，老子直接变除法)
+    #
+    #                divide_temp_variable = {
+    #                    SOV_casualties_k_1 = -100000
+    #                }
+    #
+    #                divide_temp_variable = {
+    #                    SOV_casualties_k_2 = -500000
+    #                }
+    #
+    #                multiply_temp_variable = {
+    #                    SOV_surrender_progress_1 = 0.15
+    #                }
+    #                multiply_temp_variable = {
+    #                    SOV_surrender_progress_2 = -0.35
+    #                }
+    #                multiply_temp_variable = {
+    #                    SOV_surrender_progress_3 = -0.1
+    #                }
+    #                multiply_temp_variable = {
+    #                    SOV_surrender_progress_4 = 0.1
+    #                }
+    #
+    #                set_variable = {
+    #                    SOV_army_org_factor = SOV_casualties_k_1
+    #                }
+    #                set_variable = {
+    #                    SOV_army_org_regain = SOV_casualties_k_1
+    #                }
+    #                set_variable = {
+    #                    SOV_surrender_limit = SOV_casualties_k_2
+    #                }
+    #                set_variable = {
+    #                    SOV_army_strength_factor = SOV_surrender_progress_4
+    #                }
+    #
+    #                set_variable = {
+    #                    SOV_resistance_damage_to_garrison_on_our_occupied_states# = SOV_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    SOV_resistance_growth_on_our_occupied_states = #SOV_surrender_progress_1
+    #                }
+    #
+    #                set_variable = {
+    #                    SOV_army_core_attack_factor = SOV_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    SOV_army_core_defence_factor = SOV_surrender_progress_1
+    #                }
+    #
+    #                set_variable = {
+    #                    SOV_production_speed_buildings_factor = #SOV_surrender_progress_2
+    #                }
+    #                set_variable = {
+    #                    SOV_consumer_goods_factor = SOV_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    SOV_industrial_capacity_factory = #SOV_surrender_progress_2
+    #                }
+    #
+    #                set_variable = {
+    #                    SOV_army_attack_factor = SOV_surrender_progress_3
+    #                }
+    #                set_variable = {
+    #                    SOV_army_defence_factor = SOV_surrender_progress_3
+    #                }
+    #                set_variable = {
+    #                    SOV_breakthrough_factor = SOV_surrender_progress_4
+    #                }
+    #            }
+    #        }
+    #    }
+    #}
+
+    #on_monthly_USA = {
+    #    effect = {
+    #        if = {
+    #            limit = {
+    #                USA = {
+    #                    is_ai = yes
+    #                }
+    #            }
+    #            USA = {
+    #                #给工厂产出debuff+建造速度debuff 上限35%
+    #                set_temp_variable = {
+    #                    USA_surrender_progress_1 = USA.surrender_progress
+    #                }
+    #                #核心领土攻防+抵抗buff 上限15%
+    #                set_temp_variable = {
+    #                    USA_surrender_progress_2 = USA.surrender_progress
+    #                }
+    #                #投降度越高，攻防越低 上限10%
+    #                set_temp_variable = {
+    #                    USA_surrender_progress_3 = USA.surrender_progress
+    #                }
+    #
+    #                #突破单算 是加成，最高给个10%
+    #                set_temp_variable = {
+    #                    USA_surrender_progress_4 = USA.surrender_progress
+    #                }
+    #
+    #                #组织度和组织度恢复速度是苏联伤亡 大概乘0.0001应该不会超标(你妈的#乘不生效，老子直接变除法)
+    #                set_temp_variable = {
+    #                    USA_casualties_k_1 = USA.casualties_k
+    #                }
+    #
+    #                #打满投降得整大点，不然打个几M投降倾向爆了那逆天了
+    #                set_temp_variable = {
+    #                    USA_casualties_k_2 = USA.casualties_k
+    #                }    
+    #
+    #                #HP是苏联与敌人整体实力之比 乘0.05差不多 1000*0.00001(你妈的乘#不生效，老子直接变除法)
+    #
+    #                divide_temp_variable = {
+    #                    USA_casualties_k_1 = -100000
+    #                }
+    #                divide_temp_variable = {
+    #                    USA_casualties_k_2 = -500000
+    #                }
+    #
+    #                multiply_temp_variable = {
+    #                    USA_surrender_progress_1 = 0.15
+    #                }
+    #                multiply_temp_variable = {
+    #                    USA_surrender_progress_2 = -0.35
+    #                }
+    #                multiply_temp_variable = {
+    #                    USA_surrender_progress_3 = -0.1
+    #                }
+    #                multiply_temp_variable = {
+    #                    USA_surrender_progress_4 = 0.1
+    #                }
+    #
+    #                set_variable = {
+    #                    USA_army_org_factor = USA_casualties_k_1
+    #                }
+    #                set_variable = {
+    #                    USA_army_org_regain = USA_casualties_k_1
+    #                }
+    #                set_variable = {
+    #                    USA_surrender_limit = USA_casualties_k_2
+    #                }
+    #                set_variable = {
+    #                    USA_army_strength_factor = USA_surrender_progress_4
+    #                }
+    #
+    #                set_variable = {
+    #                    USA_resistance_damage_to_garrison_on_our_occupied_states# = USA_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    USA_resistance_growth_on_our_occupied_states = #USA_surrender_progress_1
+    #                }
+    #
+    #                set_variable = {
+    #                    USA_army_core_attack_factor = USA_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    USA_army_core_defence_factor = USA_surrender_progress_1
+    #                }
+    #
+    #                set_variable = {
+    #                    USA_production_speed_buildings_factor = #USA_surrender_progress_2
+    #                }
+    #                set_variable = {
+    #                    USA_consumer_goods_factor = USA_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    USA_industrial_capacity_factory = #USA_surrender_progress_2
+    #                }
+    #
+    #                set_variable = {
+    #                    USA_army_attack_factor = USA_surrender_progress_3
+    #                }
+    #                set_variable = {
+    #                    USA_army_defence_factor = USA_surrender_progress_3
+    #                }
+    #                set_variable = {
+    #                    USA_breakthrough_factor = USA_surrender_progress_4
+    #                }
+    #            }
+    #        }
+    #    }
+    #}
+
+    #on_monthly_ENG = {
+    #    effect = {
+    #        if = {
+    #            limit = {
+    #                ENG = {
+    #                    is_ai = yes
+    #                }
+    #            }
+    #            ENG = {
+    #                #给工厂产出debuff+建造速度debuff 上限35%
+    #                set_temp_variable = {
+    #                    ENG_surrender_progress_1 = ENG.surrender_progress
+    #                }
+    #                #核心领土攻防+抵抗buff 上限15%
+    #                set_temp_variable = {
+    #                    ENG_surrender_progress_2 = ENG.surrender_progress
+    #                }
+    #                #投降度越高，攻防越低 上限10%
+    #                set_temp_variable = {
+    #                    ENG_surrender_progress_3 = ENG.surrender_progress
+    #                }
+    #    
+    #                #突破单算 是加成，最高给个10%
+    #                set_temp_variable = {
+    #                    ENG_surrender_progress_4 = ENG.surrender_progress
+    #                }
+    #    
+    #                #组织度和组织度恢复速度是苏联伤亡 大概乘0.0001应该不会超标(你妈的#乘不生效，老子直接变除法)
+    #                set_temp_variable = {
+    #                    ENG_casualties_k_1 = ENG.casualties_k
+    #                }
+    #                set_temp_variable = {
+    #                    ENG_casualties_k_2 = ENG.casualties_k
+    #                }
+    #    
+    #                #HP是苏联与敌人整体实力之比 乘0.05差不多 1000*0.00001(你妈的乘#不生效，老子直接变除法)
+    #    
+    #                divide_temp_variable = {
+    #                    ENG_casualties_k_1 = -100000
+    #                }
+    #                divide_temp_variable = {
+    #                    ENG_casualties_k_2 = -300000
+    #                }
+    #    
+    #                multiply_temp_variable = {
+    #                    ENG_surrender_progress_1 = 0.08
+    #                }
+    #                multiply_temp_variable = {
+    #                    ENG_surrender_progress_2 = -0.45
+    #                }
+    #                multiply_temp_variable = {
+    #                    ENG_surrender_progress_3 = -0.15
+    #                }
+    #                multiply_temp_variable = {
+    #                    ENG_surrender_progress_4 = 0.06
+    #                }
+    #    
+    #                set_variable = {
+    #                    ENG_army_org_factor = ENG_casualties_k_1
+    #                }
+    #                set_variable = {
+    #                    ENG_army_org_regain = ENG_casualties_k_1
+    #                }
+    #                set_variable = {
+    #                    ENG_surrender_limit = ENG_casualties_k_2
+    #                }
+    #                set_variable = {
+    #                    ENG_army_strength_factor = ENG_surrender_progress_4
+    #                }
+    #    
+    #                set_variable = {
+    #                    ENG_resistance_damage_to_garrison_on_our_occupied_states# = ENG_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    ENG_resistance_growth_on_our_occupied_states = #ENG_surrender_progress_1
+    #                }
+    #    
+    #                set_variable = {
+    #                    ENG_army_core_attack_factor = ENG_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    ENG_army_core_defence_factor = ENG_surrender_progress_1
+    #                }
+    #    
+    #                set_variable = {
+    #                    ENG_production_speed_buildings_factor = #ENG_surrender_progress_2
+    #                }
+    #                set_variable = {
+    #                    ENG_consumer_goods_factor = ENG_surrender_progress_1
+    #                }
+    #                set_variable = {
+    #                    ENG_industrial_capacity_factory = #ENG_surrender_progress_2
+    #                }
+    #    
+    #                set_variable = {
+    #                    ENG_army_attack_factor = ENG_surrender_progress_3
+    #                }
+    #                set_variable = {
+    #                    ENG_army_defence_factor = ENG_surrender_progress_3
+    #                }
+    #                set_variable = {
+    #                    ENG_breakthrough_factor = ENG_surrender_progress_4
+    #                }
+    #            }
+    #        }
+    #    }
+    #}
+        
+    # on_startup = {
+    #     effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
+    #         every_country = {
+    #             limit = {
+    #                 is_ai = yes
+    #                 NOT = { has_idea = AI_Balance_correction }
+    #             }
+    #             add_ideas = AI_Balance_correction
+    #         }
+    #     }
+	# }
+	# on_startup = {
+    #     effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
+    #         every_country = {
+    #             limit = {
+    #                 is_ai = no
+    #             }
+    #             country_event = kjsj.1
+    #             set_country_flag = IAR_PLAYER_FLAG
+    #         }
+    #     }
+	# }
+
+    #英美ai难度选择
+    #on_startup = {
+    #    effect = { # NEVER FORGET! Important to include this line to #distinguish it from random_events = { ... }
+    #        every_country = {
+    #            limit = {
+    #                is_ai = no
+    #                or = {
+    #                    original_tag = GER
+    #                    original_tag = ITA
+    #                    original_tag = CHI
+    #                    original_tag = FIN
+    #                    original_tag = HUN
+    #                    original_tag = BUL
+    #                    original_tag = ARG
+    #                }
+    #            }
+    #            country_event = mod_events.2
+    #        }
+    #    }
+	#}
+
+    #on_startup = {
+    #    effect = { # NEVER FORGET! Important to include this line to #distinguish it from random_events = { ... }
+    #        every_country = {
+    #            limit = {
+    #                is_ai = no
+    #            }
+    #            country_event = kjsj.2
+    #        }
+    #    }
+	#}
+
+    #苏联难度选择
+    #on_startup = {
+    #    effect = { # NEVER FORGET! Important to include this line to #distinguish it from random_events = { ... }
+    #        every_country = {
+    #            limit = {
+    #                is_ai = no
+    #                or = {
+    #                    original_tag = GER
+    #                    original_tag = ITA
+    #                    original_tag = CHI
+    #                    original_tag = FIN
+    #                    original_tag = HUN
+    #                    original_tag = BUL
+    #                    original_tag = ARG
+    #                }
+    #            }
+    #            country_event = kjsj.3
+    #        }
+    #    }
+	#}
+
+    #苏联玩家难度选择
+    on_startup = {
+        effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
+            every_country = {
+                limit = {
+                    is_ai = no
+                    original_tag = SOV
+                }
+                country_event = sov_armor.114514
+            }
+        }
+	}
+
+    #AI轴心国难度选择
+    #on_startup = {
+    #    effect = { # NEVER FORGET! Important to include this line to #distinguish it from random_events = { ... }
+    #        every_country = {
+    #            limit = {
+    #                is_ai = no
+    #                or = {
+    #                    original_tag = SOV
+    #                    original_tag = USA
+    #                    original_tag = ENG
+    #                }
+    #            }
+    #            country_event = Axis_ai.1
+    #        }
+    #    }
+	#}
+
+    on_startup = {
+        effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
+            BHU = {
+                add_ideas = AI_idea_CNM_CPU
+                set_rule = {
+                    can_access_market = no
+                    can_be_spymaster = no
+                    can_boost_own_ideology = no
+                    can_create_collaboration_government = no
+                    can_create_factions = no
+                    can_declare_war_on_same_ideology = no
+                    can_declare_war_without_wargoal_when_in_war = no
+                    can_decline_call_to_war = no
+                    can_force_government = no
+                    can_guarantee_other_ideologies = no
+                }
+                set_research_slots = 1
+                destroy_ships = {
+                    type = ship_hull_light
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_cruiser
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_heavy
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_carrier
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_submarine
+                    count = all
+                }
+            }
+            NEP = {
+                add_ideas = AI_idea_CNM_CPU
+                set_rule = {
+                    can_access_market = no
+                    can_be_spymaster = no
+                    can_boost_own_ideology = no
+                    can_create_collaboration_government = no
+                    can_create_factions = no
+                    can_declare_war_on_same_ideology = no
+                    can_declare_war_without_wargoal_when_in_war = no
+                    can_decline_call_to_war = no
+                    can_force_government = no
+                    can_guarantee_other_ideologies = no
+                }
+                set_research_slots = 1
+                destroy_ships = {
+                    type = ship_hull_light
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_cruiser
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_heavy
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_carrier
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_submarine
+                    count = all
+                }
+            }
+            TIB = {
+                add_ideas = AI_idea_CNM_CPU
+                set_rule = {
+                    can_access_market = no
+                    can_be_spymaster = no
+                    can_boost_own_ideology = no
+                    can_create_collaboration_government = no
+                    can_create_factions = no
+                    can_declare_war_on_same_ideology = no
+                    can_declare_war_without_wargoal_when_in_war = no
+                    can_decline_call_to_war = no
+                    can_force_government = no
+                    can_guarantee_other_ideologies = no
+                }
+                set_research_slots = 1
+                destroy_ships = {
+                    type = ship_hull_light
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_cruiser
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_heavy
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_carrier
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_submarine
+                    count = all
+                }
+            }
+            OMA = {
+                add_ideas = AI_idea_CNM_CPU
+                set_rule = {
+                    can_access_market = no
+                    can_be_spymaster = no
+                    can_boost_own_ideology = no
+                    can_create_collaboration_government = no
+                    can_create_factions = no
+                    can_declare_war_on_same_ideology = no
+                    can_declare_war_without_wargoal_when_in_war = no
+                    can_decline_call_to_war = no
+                    can_force_government = no
+                    can_guarantee_other_ideologies = no
+                }
+                set_research_slots = 1
+                destroy_ships = {
+                    type = ship_hull_light
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_cruiser
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_heavy
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_carrier
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_submarine
+                    count = all
+                }
+            }
+            YEM = {
+                add_ideas = AI_idea_CNM_CPU
+                set_rule = {
+                    can_access_market = no
+                    can_be_spymaster = no
+                    can_boost_own_ideology = no
+                    can_create_collaboration_government = no
+                    can_create_factions = no
+                    can_declare_war_on_same_ideology = no
+                    can_declare_war_without_wargoal_when_in_war = no
+                    can_decline_call_to_war = no
+                    can_force_government = no
+                    can_guarantee_other_ideologies = no
+                }
+                set_research_slots = 1
+                destroy_ships = {
+                    type = ship_hull_light
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_cruiser
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_heavy
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_carrier
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_submarine
+                    count = all
+                }
+            }
+            SAU = {
+                add_ideas = AI_idea_CNM_CPU
+                set_rule = {
+                    can_access_market = no
+                    can_be_spymaster = no
+                    can_boost_own_ideology = no
+                    can_create_collaboration_government = no
+                    can_create_factions = no
+                    can_declare_war_on_same_ideology = no
+                    can_declare_war_without_wargoal_when_in_war = no
+                    can_decline_call_to_war = no
+                    can_force_government = no
+                    can_guarantee_other_ideologies = no
+                }
+                set_research_slots = 1
+                destroy_ships = {
+                    type = ship_hull_light
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_cruiser
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_heavy
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_carrier
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_submarine
+                    count = all
+                }
+            }
+            IRQ = {
+                add_ideas = AI_idea_CNM_CPU
+                set_rule = {
+                    can_access_market = no
+                    can_be_spymaster = no
+                    can_boost_own_ideology = no
+                    can_create_collaboration_government = no
+                    can_create_factions = no
+                    can_declare_war_on_same_ideology = no
+                    can_declare_war_without_wargoal_when_in_war = no
+                    can_decline_call_to_war = no
+                    can_force_government = no
+                    can_guarantee_other_ideologies = no
+                }
+                set_research_slots = 1
+                destroy_ships = {
+                    type = ship_hull_light
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_cruiser
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_heavy
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_carrier
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_submarine
+                    count = all
+                }
+            }  
+    }
+	}
+    #彩蛋
+    on_startup = {
+        effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
+            if = {
+                    limit = {
+                        has_game_rule = { rule = IAR_SOV_Atomi_heart option = IAR_SOV_Atomi_heart_rule }
+                    }
+                    set_global_flag = IAR_SOV_Atomi_heart
+            }
+        }
+	}
+    
+#非洲资源修正
+    on_startup = {
+        effect = {
+            #利比里亚
+            298 = {
+                add_resource = {
+                    type = rubber
+                    amount = 150
+                }
+            }
+            #埃及
+            447 = {
+                add_resource = {
+                    type = oil
+                    amount = 25
+                }
+            }
+            446 = {
+                add_resource = {
+                    type = oil
+                    amount = 25
+                }
+            }
+            #南非
+            542 = {
+                add_resource = {
+                    type = chromium
+                    amount = 150
+                }
+            }
+            275 = {
+                add_resource = {
+                    type = chromium
+                    amount = 150
+                }
+            }
+            719 = {
+                add_resource = {
+                    type = chromium
+                    amount = 150
+                }
+            }
+            #塞拉利昂
+            700 = {
+                add_resource = {
+                    type = steel
+                    amount = 200
+                }
+            }
+            #几内亚
+            296 = {
+                add_resource = {
+                    type = aluminium
+                    amount = 200
+                }
+            }
+            780 = {
+                add_resource = {
+                    type = aluminium
+                    amount = 200
+                }
+            }
+            #东非
+            837 = {
+                add_resource = {
+                    type = steel
+                    amount = 100
+                }
+            }
+            559 = {
+                add_resource = {
+                    type = steel
+                    amount = 150
+                }
+            }
+        }
+    }
+#六大国直接发煤炭
+    on_startup = {
+        effect = {
+            1035 = { 
+                add_resource = {
+                    type = coal
+                    amount = 1000
+                }
+			}
+            219 = { 
+                add_resource = {
+                    type = coal
+                    amount = 1000
+                }
+			}
+            64 = { 
+                add_resource = {
+                    type = coal
+                    amount = 1000
+                }
+			}
+            126 = { 
+                add_resource = {
+                    type = coal
+                    amount = 1000
+                }
+			}
+            2 = { 
+                add_resource = {
+                    type = coal
+                    amount = 1000
+                }
+			}
+            361 = { 
+                add_resource = {
+                    type = coal
+                    amount = 1000
+                }
+			}
+        }
+    }
+
+}

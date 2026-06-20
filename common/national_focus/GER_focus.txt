@@ -17,8 +17,8 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = {
-		x = 100
-		y = 3000
+		x = 450
+		y = 1800
 	}
 	#### ##    ## ##    ## ######## ########      ######  #### ########   ######  ##       ######## 
 	##  ###   ## ###   ## ##       ##     ##    ##    ##  ##  ##     ## ##    ## ##       ##       
@@ -29,8 +29,8 @@ focus_tree = {
 	#### ##    ## ##    ## ######## ##     ##     ######  #### ##     ##  ######  ######## ########
 	focus = {
 		id = GER_fuhrerprinzip
-		x = 8
-		y = 0
+		x = 61
+		y = 8
 		cost = 0.2
 		icon = GFX_focus_GER_support_the_fuhrer
 		continue_if_invalid = no
@@ -360,7 +360,7 @@ focus_tree = {
 		id = GER_form_organization_todt
 		x = 0
 		y = 1
-		cost = 0
+		cost = 15
 		icon = GFX_focus_GER_form_organization_todt
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -448,7 +448,7 @@ focus_tree = {
 		id = GER_autonomous_organization_todt
 		x = 0
 		y = 1
-		cost = 0
+		cost = 20
 		icon = GFX_focus_GER_autonomous_organization_todt
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -587,8 +587,8 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_ascension_of_speer
-		x = 2
-		y = 0
+		x = -5
+		y = 1
 		cost = 0.2
 		icon = GFX_focus_GER_ascension_of_speer
 		continue_if_invalid = no
@@ -755,13 +755,13 @@ focus_tree = {
 				}
 			}
 		}
-		relative_position_id = GER_ascension_of_todt
+		relative_position_id = GER_fuhrerprinzip
 	}
 	focus = {
 		id = GER_employ_philipp_holzmann
 		x = 0
 		y = 1
-		cost = 0
+		cost = 15
 		icon = GFX_focus_GER_philipp_holzmann
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -851,7 +851,7 @@ focus_tree = {
 		id = GER_plenipotentiary_of_armaments
 		x = 0
 		y = 1
-		cost = 0
+		cost = 20
 		icon = GFX_focus_GER_plenipotentiary_of_armaments
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1014,9 +1014,9 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_wunderwaffe
-		x = 1
+		x = -1
 		y = 1
-		cost = 0
+		cost = 25
 		icon = GFX_focus_GER_wunderwaffe_inner_circle
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1151,12 +1151,12 @@ focus_tree = {
 				tooltip = production_speed_facility_factor_tt
 			}
 		}
-		relative_position_id = GER_autonomous_organization_todt
+		relative_position_id = GER_plenipotentiary_of_armaments
 	}
 	focus = {
 		id = GER_ascension_of_goring
-		x = 2
-		y = 0
+		x = -3
+		y = 1
 		cost = 0.2
 		icon = GFX_focus_GER_ascension_of_goring
 		continue_if_invalid = no
@@ -1323,13 +1323,13 @@ focus_tree = {
 				}
 			}
 		}
-		relative_position_id = GER_ascension_of_speer
+		relative_position_id = GER_fuhrerprinzip
 	}
 	focus = {
 		id = GER_prioritize_the_four_year_plan
 		x = 0
 		y = 1
-		cost = 0
+		cost = 15
 		icon = GFX_focus_GER_prioritize_the_four_year_plan
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1508,7 +1508,7 @@ focus_tree = {
 		id = GER_plenipotentiary_of_the_four_year_plan
 		x = 0
 		y = 1
-		cost = 0
+		cost = 20
 		icon = GFX_focus_GER_plenipotentiary_of_the_four_year_plan
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1657,7 +1657,7 @@ focus_tree = {
 		id = GER_integration_of_puppet_economies
 		x = 0
 		y = 1
-		cost = 0
+		cost = 25
 		icon = GFX_focus_GER_integration_of_puppet_economies
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1890,7 +1890,7 @@ focus_tree = {
 		id = GER_expand_gestapo
 		x = -1
 		y = 1
-		cost = 0
+		cost = 15
 		icon = GFX_focus_GER_expand_gestapo
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1972,7 +1972,7 @@ focus_tree = {
 		id = GER_absorb_the_abwehr
 		x = 0
 		y = 1
-		cost = 0
+		cost = 20
 		icon = GFX_focus_GER_absorb_the_abwehr
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -2041,7 +2041,7 @@ focus_tree = {
 		id = GER_expand_ss_security_duties
 		x = 1
 		y = 1
-		cost = 0
+		cost = 15
 		icon = GFX_focus_GER_expand_ss_security_duties
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -2121,7 +2121,7 @@ focus_tree = {
 		id = GER_strengthen_the_waffen_ss
 		x = 0
 		y = 1
-		cost = 0
+		cost = 20
 		icon = GFX_focus_GER_strengthen_the_waffen_ss
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -2584,7 +2584,7 @@ focus_tree = {
 		id = GER_hegemony_of_the_ss
 		x = 1
 		y = 1
-		cost = 0
+		cost = 25
 		icon = GFX_focus_GER_hegemony_of_the_ss
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -2839,7 +2839,7 @@ focus_tree = {
 		id = GER_ministry_of_public_enlightenment
 		x = 0
 		y = 1
-		cost = 0
+		cost = 15
 		icon = GFX_focus_GER_reich_ministry_of_public_enlightenment
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -2906,7 +2906,7 @@ focus_tree = {
 		id = GER_fund_the_film_department
 		x = 0
 		y = 1
-		cost = 0
+		cost = 20
 		icon = GFX_focus_GER_fund_the_film_department
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -2976,7 +2976,7 @@ focus_tree = {
 		id = GER_propaganda_master
 		x = 0
 		y = 1
-		cost = 0
+		cost = 25
 		icon = GFX_focus_GER_propaganda_master
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -3236,8 +3236,8 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_party_chancellor_bormann
-		x = 2
-		y = 0
+		x = 7
+		y = 1
 		cost = 0.2
 		icon = GFX_focus_GER_party_chancellor_bormann
 		continue_if_invalid = no
@@ -3415,13 +3415,13 @@ focus_tree = {
 				}
 			}
 		}
-		relative_position_id = GER_party_chancellor_hess
+		relative_position_id = GER_fuhrerprinzip
 	}
 	focus = {
 		id = GER_optimize_reich_labour_service
 		x = 1
 		y = 1
-		cost = 0
+		cost = 15
 		icon = GFX_focus_GER_optimize_reich_labour_service
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -3487,8 +3487,8 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = {
-			focus = GER_party_chancellor_hess
 			focus = GER_party_chancellor_bormann
+			focus = GER_party_chancellor_hess
 		}
 		completion_reward = {
 			unlock_decision_category_tooltip = GER_reich_labor_service_cat
@@ -3499,7 +3499,7 @@ focus_tree = {
 		id = GER_rally_the_industrialists
 		x = -1
 		y = 1
-		cost = 0
+		cost = 20
 		icon = GFX_focus_GER_rally_the_industrialists
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -3578,7 +3578,7 @@ focus_tree = {
 		id = GER_glorify_party_rallies
 		x = 1
 		y = 1
-		cost = 0
+		cost = 20
 		icon = GFX_focus_GER_glorify_party_rallies
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -3643,7 +3643,7 @@ focus_tree = {
 		id = GER_total_control_over_domestic_affairs
 		x = 1
 		y = 1
-		cost = 0
+		cost = 25
 		icon = GFX_focus_GER_total_control_over_domestic_affairs
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -3711,8 +3711,8 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = {
-			focus = GER_glorify_party_rallies
 			focus = GER_rally_the_industrialists
+			focus = GER_glorify_party_rallies
 		}
 		completion_reward = {
 			add_political_power = 100
@@ -3779,9 +3779,9 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_a_strong_successor
-		x = -2
-		y = 5
-		cost = 5
+		x = 4
+		y = 1
+		cost = 2
 		icon = GFX_focus_GER_a_strong_successor
 		continue_if_invalid = no
 		cancel_if_invalid = no
@@ -3903,9 +3903,9 @@ focus_tree = {
 			focus = GER_loyalty_to_the_fuhrer
 		}
 		prerequisite = {
-			focus = GER_hegemony_of_the_ss
 			focus = GER_wunderwaffe
 			focus = GER_integration_of_puppet_economies
+			focus = GER_hegemony_of_the_ss
 			focus = GER_propaganda_master
 			focus = GER_total_control_over_domestic_affairs
 		}
@@ -3941,13 +3941,13 @@ focus_tree = {
 				clr_country_flag = GER_a_strong_successor_flag
 			}
 		}
-		relative_position_id = GER_fuhrerprinzip
+		relative_position_id = GER_wunderwaffe
 	}
 	focus = {
 		id = GER_loyalty_to_the_fuhrer
-		x = 2
-		y = 5
-		cost = 5
+		x = 8
+		y = 1
+		cost = 2
 		icon = GFX_focus_GER_loyalty_to_the_fuhrer
 		continue_if_invalid = no
 		cancel_if_invalid = no
@@ -4073,9 +4073,9 @@ focus_tree = {
 			focus = GER_a_strong_successor
 		}
 		prerequisite = {
-			focus = GER_hegemony_of_the_ss
 			focus = GER_wunderwaffe
 			focus = GER_integration_of_puppet_economies
+			focus = GER_hegemony_of_the_ss
 			focus = GER_propaganda_master
 			focus = GER_total_control_over_domestic_affairs
 		}
@@ -4109,7 +4109,7 @@ focus_tree = {
 				clr_country_flag = GER_loyalty_to_the_fuhrer_flag
 			}
 		}
-		relative_position_id = GER_fuhrerprinzip
+		relative_position_id = GER_wunderwaffe
 	}
 	#####################################################################################
 	#####################################################################################
@@ -4123,249 +4123,289 @@ focus_tree = {
 	#####################################################################################
 	focus = {
 		id = GER_advance_into_the_rhineland
-		x = 40
-		y = 0
-		cost = 1
+		x = 25
+		y = 3
+		cost = 0.2
 		icon = GFX_focus_GER_remilitarize_the_rhineland
 		continue_if_invalid = no
 		cancel_if_invalid = yes
 	}
 	focus = {
 		id = GER_the_imposition_of_price_controls
-		x = 32
-		y = 3
-		cost = 0
+		x = -2
+		y = 1
+		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_autarkic_efforts
 		}
+		relative_position_id = GER_autarkic_efforts
 	}
 	focus = {
 		id = GER_trade_agreement_with_Sweden
-		x = 35
+		x = -5
 		y = 1
-		cost = 3
-		cancel_if_invalid = yes
+		cost = 1
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_advance_into_the_rhineland
 		}
+		relative_position_id = GER_advance_into_the_rhineland
 	}
 	focus = {
 		id = GER_four_year_plan
-		x = 29
+		x = -11
 		y = 1
-		cost = 3
-		cancel_if_invalid = yes
+		cost = 1
+		icon = GFX_focus_PRC_urbanization
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_advance_into_the_rhineland
 		}
+		relative_position_id = GER_advance_into_the_rhineland
 	}
 	focus = {
 		id = GER_Invest_in_IG_Farben
-		x = 35
-		y = 4
-		cost = 0
-		cancel_if_invalid = yes
+		x = 3
+		y = 1
+		cost = 2
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_autarkic_efforts
 		}
+		relative_position_id = GER_autarkic_efforts
 	}
 	focus = {
 		id = GER_National_Expressway
-		x = 29
-		y = 2
-		cost = 0
-		cancel_if_invalid = yes
+		x = 0
+		y = 1
+		cost = 2
+		icon = GFX_focus_GER_ascension_of_goring
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_four_year_plan
 		}
+		relative_position_id = GER_four_year_plan
 	}
 	focus = {
 		id = GER_the_Ruhr
-		x = 25
-		y = 2
-		cost = 0
-		cancel_if_invalid = yes
+		x = -4
+		y = 1
+		cost = 3
+		icon = GFX_focus_GER_ascension_of_speer
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_four_year_plan
 		}
+		relative_position_id = GER_four_year_plan
 	}
 	focus = {
 		id = GER_KdF_factory
-		x = 25
-		y = 4
-		cost = 0
-		cancel_if_invalid = yes
+		x = 0
+		y = 2
+		cost = 3
+		icon = GFX_focus_GER_autonomous_organization_todt
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_the_Ruhr
 		}
+		relative_position_id = GER_the_Ruhr
 	}
 	focus = {
 		id = GER_autarkic_efforts
-		x = 33
-		y = 2
-		cost = 0
-		cancel_if_invalid = yes
+		x = 4
+		y = 1
+		cost = 1
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_four_year_plan
 		}
+		relative_position_id = GER_four_year_plan
 	}
 	focus = {
 		id = GER_Reich_Research_Council
-		x = 26
-		y = 3
-		cost = 0
-		cancel_if_invalid = yes
+		x = 2
+		y = 1
+		cost = 5
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_the_Ruhr
 		}
+		relative_position_id = GER_the_Ruhr
 	}
 	focus = {
 		id = GER_Hermann_Goring_Works
-		x = 28
-		y = 4
-		cost = 0
-		cancel_if_invalid = yes
+		x = 0
+		y = 2
+		cost = 2
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_National_Expressway
 		}
+		relative_position_id = GER_National_Expressway
 	}
 	focus = {
 		id = GER_the_core_of_global_industry
-		x = 26
-		y = 7
-		cost = 0
-		cancel_if_invalid = yes
+		x = 1
+		y = 1
+		cost = 10
 		continue_if_invalid = no
-		prerequisite = {
-			focus = GER_expand_industrial_land
-		}
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_Knowledge_is_power
 		}
+		prerequisite = {
+			focus = GER_expand_industrial_land
+		}
+		relative_position_id = GER_Knowledge_is_power
 	}
 	focus = {
 		id = GER_mature_industrial_system
-		x = 26
-		y = 5
-		cost = 0
-		cancel_if_invalid = yes
+		x = 2
+		y = 1
+		cost = 5
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
-			focus = GER_Reich_Research_Council
+			focus = GER_KdF_factory
 		}
 		prerequisite = {
 			focus = GER_Hermann_Goring_Works
 		}
 		prerequisite = {
-			focus = GER_KdF_factory
+			focus = GER_Reich_Research_Council
 		}
+		relative_position_id = GER_KdF_factory
 	}
 	focus = {
 		id = GER_promote_capital_inflow
-		x = 32
-		y = 5
-		cost = 0
-		cancel_if_invalid = yes
+		x = 0
+		y = 1
+		cost = 3
 		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = GER_the_imposition_of_price_controls
+		}
 		prerequisite = {
 			focus = GER_the_Volkswagenwerk
 		}
+		relative_position_id = GER_the_Volkswagenwerk
 	}
 	focus = {
 		id = GER_Establish_the_Buna_plant
-		x = 34
-		y = 5
-		cost = 0
-		cancel_if_invalid = yes
+		x = -1
+		y = 2
+		cost = 3
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_Invest_in_IG_Farben
 		}
+		relative_position_id = GER_Invest_in_IG_Farben
 	}
 	focus = {
 		id = GER_coal_liquefaction
-		x = 36
-		y = 5
-		cost = 0
-		cancel_if_invalid = yes
+		x = 1
+		y = 2
+		cost = 3
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_Invest_in_IG_Farben
 		}
+		relative_position_id = GER_Invest_in_IG_Farben
 	}
 	focus = {
 		id = GER_achieve_self_sufficiency
-		x = 31
-		y = 6
-		cost = 0
-		cancel_if_invalid = yes
+		x = 2
+		y = 1
+		cost = 5
 		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = GER_promote_capital_inflow
+		}
+		prerequisite = {
+			focus = GER_expand_resource_extraction
+		}
 		prerequisite = {
 			focus = GER_Establish_the_Buna_plant
 		}
 		prerequisite = {
 			focus = GER_coal_liquefaction
 		}
-		prerequisite = {
-			focus = GER_mature_industrial_system
-		}
-		prerequisite = {
-			focus = GER_promote_capital_inflow
-		}
+		relative_position_id = GER_promote_capital_inflow
 	}
 	focus = {
 		id = GER_wartime_economic_mobilization
-		x = 34
-		y = 7
-		cost = 0
-		cancel_if_invalid = yes
+		x = 0
+		y = 1
+		cost = 5
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_achieve_self_sufficiency
 		}
+		relative_position_id = GER_achieve_self_sufficiency
 	}
 	focus = {
 		id = GER_expand_industrial_land
-		x = 27
-		y = 6
-		cost = 0
-		cancel_if_invalid = yes
+		x = 1
+		y = 1
+		cost = 5
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_mature_industrial_system
 		}
+		relative_position_id = GER_mature_industrial_system
 	}
 	focus = {
 		id = GER_Knowledge_is_power
-		x = 25
-		y = 6
-		cost = 0
-		cancel_if_invalid = yes
+		x = -1
+		y = 1
+		cost = 5
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_mature_industrial_system
 		}
+		relative_position_id = GER_mature_industrial_system
 	}
 	focus = {
 		id = GER_the_Volkswagenwerk
-		x = 32
-		y = 4
-		cost = 0
-		cancel_if_invalid = yes
+		x = 0
+		y = 1
+		cost = 2
 		continue_if_invalid = no
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = GER_the_imposition_of_price_controls
 		}
+		relative_position_id = GER_the_imposition_of_price_controls
+	}
+	focus = {
+		id = GER_expand_resource_extraction
+		x = 0
+		y = 2
+		cost = 3
+		icon = GFX_focus_generic_expand_gold_mining
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = GER_autarkic_efforts
+		}
+		relative_position_id = GER_autarkic_efforts
 	}
 }

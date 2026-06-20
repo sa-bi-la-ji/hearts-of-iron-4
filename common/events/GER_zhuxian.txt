@@ -1,0 +1,326 @@
+add_namespace = zhuxian
+add_namespace = germany
+
+news_event = {
+	id = zhuxian.1
+	picture = GFX_event_01
+    title = zhuxian.1.t
+    desc = zhuxian.1.d
+	is_triggered_only = yes
+
+    immediate = { 
+
+	}
+	option = { 
+        name = zhuxian.1.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.2
+	picture = GFX_event_02
+    title = zhuxian.2.t
+    desc = zhuxian.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.2.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.3
+	picture = GFX_report_event_usa_election_generic
+    title = zhuxian.3.t
+    desc = zhuxian.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.3.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+
+country_event = {
+	id = zhuxian.4
+	picture = GFX_report_event_german_parade_paris
+    title = zhuxian.4.t
+    desc = zhuxian.4.d
+	trigger = {
+		29 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		ENG = { has_war_with = GER }
+		FRA = {
+			has_war_with = GER
+		}
+		tag = GER
+		NOT = {
+			has_country_flag = GER_Dunkirk
+		}
+	 }
+	immediate = {
+		set_country_flag = GER_Dunkirk
+	}
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.4.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.5
+	picture = GFX_report_event_ARG_coup_consolidating
+    title = zhuxian.5.t
+    desc = zhuxian.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.5.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.6
+	picture = GFX_report_event_nazis_in_danzig
+    title = zhuxian.6.t
+    desc = zhuxian.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.6.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.7
+	picture = GFX_report_event_bul_soviet_army_sofia
+    title = zhuxian.7.t
+    desc = zhuxian.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.7.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.8
+	picture = GFX_report_event_FIN_risto_ryti_speech
+    title = zhuxian.8.t
+    desc = zhuxian.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.8.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.9
+	picture = GFX_report_event_czech_soldiers_01
+    title = zhuxian.9.t
+    desc = zhuxian.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.9.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+news_event = {
+	id = zhuxian.10
+	picture = GFX_news_event_047
+    title = zhuxian.10.t
+    desc = zhuxian.10.d
+	trigger = { 
+		GER = {
+			has_war_with = SOV
+		}
+		CHI = { 
+			is_in_faction_with = GER
+			has_war_with = SOV
+		}
+		SOV = { surrender_progress > 0.8}
+		NOT = {
+			has_global_flag = NEWS_SOVIET_FALL
+		}
+	}
+
+	major = yes
+
+	immediate = {
+		set_global_flag = NEWS_SOVIET_FALL
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.10.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+news_event = {
+	id = zhuxian.11
+	picture = GFX_news_event_063
+    title = zhuxian.11.t
+    desc = zhuxian.11.d
+	trigger = { 
+		OR = {
+			NOT = { country_exists = USA }
+			USA = { has_capitulated = yes}
+			USA = { is_subject_of = GER }
+		}
+		NOT = {
+			has_global_flag = NEWS_USA_FALL
+		}
+	}
+	immediate = {
+		set_global_flag = NEWS_USA_FALL
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	fire_only_once =  = yes
+
+	major = yes
+
+	option = { 
+        name = zhuxian.11.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+news_event = {
+	id = zhuxian.12
+	picture = GFX_news_event_074
+    title = zhuxian.12.t
+    desc = zhuxian.12.d
+	trigger = { 
+		OR = {
+			NOT = { country_exists = ENG }
+			ENG = { has_capitulated = yes}
+			ENG = { is_subject_of = GER }
+		}
+		NOT = {
+			has_global_flag = NEWS_ENG_FALL
+		}
+	}
+	immediate = {
+		set_global_flag = NEWS_ENG_FALL
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	major = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.12.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.13
+	picture = GFX_report_event_gre_athens
+    title = zhuxian.13.t
+    desc = zhuxian.13.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.13.t.a
+		trigger = {
+
+		}
+	} 
+}
+
+country_event = {
+	id = zhuxian.14
+	picture = GFX_report_event_gre_enosis
+    title = zhuxian.14.t
+    desc = zhuxian.14.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+        name = zhuxian.14.t.a
+		add_manpower = 100000
+		trigger = {
+
+		}
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

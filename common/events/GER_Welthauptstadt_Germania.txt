@@ -1,0 +1,128 @@
+add_namespace = Welthauptstadt_Germania
+
+
+#日耳曼尼亚——开端
+news_event = {
+    id = Welthauptstadt_Germania.1
+    title = Welthauptstadt_Germania.1.t
+    desc = Welthauptstadt_Germania.1.d
+
+	trigger = { 
+		has_global_flag = Welthauptstadt_Germania_Plan
+		date > 1936.8.15
+		is_ai = no
+	}
+
+	immediate = {
+		hidden_effect = {
+		GER = {
+			add_ideas = Welthauptstadt_Germania_Beginning
+		}
+		}
+	}
+
+	fire_only_once = yes
+	major = yes
+
+    option = { 
+        name = Welthauptstadt_Germania.1.t.a
+		trigger = {
+
+		}
+	}
+}
+#日耳曼尼亚——中期
+news_event = {
+    id = Welthauptstadt_Germania.2
+    title = Welthauptstadt_Germania.2.t
+    desc = Welthauptstadt_Germania.2.d
+
+	trigger = { 
+		has_global_flag = Welthauptstadt_Germania_Plan
+		date > 1937.1.10
+		is_ai = no
+	}
+
+	immediate = {
+		hidden_effect = {
+		GER = {
+			add_ideas = Welthauptstadt_Germania_Midterm
+		}
+		}
+	}
+
+	fire_only_once = yes
+	major = yes
+
+    option = { 
+        name = Welthauptstadt_Germania.2.t.a
+		trigger = {
+
+		}
+	}
+}
+#日耳曼尼亚——后期
+news_event = {
+    id = Welthauptstadt_Germania.3
+    title = Welthauptstadt_Germania.3.t
+    desc = Welthauptstadt_Germania.3.d
+
+	trigger = { 
+		has_global_flag = Welthauptstadt_Germania_Plan
+		date > 1938.1.10
+		is_ai = no
+	}
+
+	immediate = {
+		hidden_effect = {
+		GER = {
+			add_ideas = Welthauptstadt_Germania_Late
+		}
+		}
+	}
+
+	fire_only_once = yes
+	major = yes
+    option = { 
+        name = Welthauptstadt_Germania.3.t.a
+		trigger = {
+
+		}
+	}
+}
+#日耳曼尼亚——结束
+news_event = {
+    id = Welthauptstadt_Germania.4
+    title = Welthauptstadt_Germania.4.t
+    desc = Welthauptstadt_Germania.4.d
+
+	trigger = { 
+		has_global_flag = Welthauptstadt_Germania_Plan
+		date > 1939.4.19
+		is_ai = no
+	}
+
+	immediate = {
+		hidden_effect = {
+		GER = {
+			add_ideas = Welthauptstadt_Germania_End
+		}
+		}
+	}
+
+	fire_only_once = yes
+	major = yes
+    option = { 
+        name = Welthauptstadt_Germania.4.t.a
+		trigger = {
+
+		}
+	}
+}
+
+
+
+
+
+
+
