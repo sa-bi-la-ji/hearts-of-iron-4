@@ -1,0 +1,16 @@
+
+-- 首都补给（）里是原版
+NDefines.NSupply.CAPITAL_SUPPLY_CIVILIAN_FACTORIES = 0.6 --（0.3）
+NDefines.NSupply.CAPITAL_SUPPLY_MILITARY_FACTORIES = 1.5 --（0.6）
+NDefines.NSupply.CAPITAL_SUPPLY_DOCKYARDS = 1.2 --（0.4）
+-- 首都补给递减
+NDefines.NSupply.CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.25 --（0.5）
+NDefines.NSupply.CAPITAL_ADDED_PENALTY_PER_PROVINCE = 0.8 --（1.2）
+-- 补给中心及递减
+NDefines.NSupply.NODE_INITIAL_SUPPLY_FLOW = 6 --（2.8）
+-- 满级基建减少递减
+NDefines.NSupply.SUPPLY_FLOW_DROP_REDUCTION_AT_MAX_INFRA = 0.6 --（0.3）
+-- 铁路等级
+NDefines.NSupply.RAILWAY_BASE_FLOW = 10.0 --（10.0）
+NDefines.NSupply.RAILWAY_FLOW_PER_LEVEL = 10.0 --（5.0）
+NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 10 --（5.0）

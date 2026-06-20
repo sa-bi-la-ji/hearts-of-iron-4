@@ -1,0 +1,15 @@
+-- NDefines.NMilitary.WAR_SCORE_LOSSES_RATIO = 0.05 --人力损失得分 0.5→0.05
+-- NDefines.NMilitary.WAR_SCORE_LOSSES_MULT_IF_CAPITULATED = 0.025 --投降后的人力损失得分 0.25→0.025
+-- NDefines.NMilitary.WAR_SCORE_STRATEGIC_BOMBING_FACTOR = 0.01 --每点战略轰炸伤害得分 0.02→0.01
+-- NDefines.NMilitary.WAR_SCORE_STRAT_BOMBING_DECAY_PER_CIVILIAN_FACTORY = 0.05 --被炸掉民工扣分 0.1→0.05
+-- NDefines.NMilitary.WAR_SCORE_AIR_IC_LOSS_FACTOR = 0.02 --对空军IC伤害得分 0.08→0.02
+-- NDefines.NMilitary.WAR_SCORE_LAND_DAMAGE_FACTOR = 0.050 --对陆军HP伤害得分 0.1→0.025
+-- NDefines.NMilitary.WAR_SCORE_ATTACKER_AND_WINNER_FACTOR = 0.6 --进攻方和胜利方对陆军HP伤害得分 1.2→0.6
+-- NDefines.NMilitary.WAR_SCORE_LAND_IC_LOSS_FACTOR = 0.02 --对陆军IC伤害得分 0.08→0.02
+-- NDefines.NMilitary.WAR_SCORE_PROVINCE_FACTOR = 8.0 --首次占领得分 4→8
+
+-- NDefines.NDiplomacy.PEACE_COST_FACTOR_COMPLIANCE_STEPS = { --顺从度和平会议折扣（顺从度下限，折扣）
+--     0,   1.0, -- between 0%  and 30% compliance, factor is 1.0 1→1
+--     30,  0.7, -- between 30% and 70% 0.9→0.7
+--     70,  0.3, -- above 70% 0.8→0.3
+-- }
