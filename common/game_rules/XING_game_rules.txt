@@ -1,0 +1,16 @@
+# 我恨死这啥子copliot了 害我回退了一个版本
+# 不不不不不 我无疑是愤怒的
+XING_GER_Welthauptstadt_Germania = {
+	name = "GER_Welthauptstadt_Germania"
+	group = "RULE_XING"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NO"
+		desc = "GER_Welthauptstadt_Germania_rule_default_desc"
+	}
+	option = {
+		name = GER_Welthauptstadt_Germania_rule
+		text = "GER_Welthauptstadt_Germania_rule_t"
+		desc = "GER_Welthauptstadt_Germania_rule_desc"
+	}
+}
