@@ -1,43 +1,27 @@
-GER_collaboration_on_NOR = {
+#建立情报机构
+GER_Intelligence_establishment= {
+	allowed = { original_tag = GER }
+
+	enable = {
+        date > 1936.1.1
+	}
+    
+    abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+}
+
+#造苏联的合作政府
+GER_Cooperative_governments_Eastern_Europe = {
 	allowed = {
 		tag = GER
 	}
 	
 	enable = {
-		tag = GER
-		NOR = {
-			exists = yes
-			has_capitulated = no
-			NOT = { is_ally_with = GER }
-		}
-		# only try before end of 1941 (and continue if already doing)
-		OR = {
-			date < 1941.7.7
-			is_preparing_operation = {
-				operation = operation_collaboration_government
-				target = NOR
-			}
-			is_running_operation = {
-				operation = operation_collaboration_government
-				target = NOR
-			}
-		}
-		# do at most once or twice depending on date
-		OR = {
-			num_finished_operations = {
-				operation = operation_collaboration_government
-				target = NOR
-				value < 1
-			}
-			AND = {
-				date > 1940.1.1
-				num_finished_operations = {
-					operation = operation_collaboration_government
-					target = NOR
-					value < 2
-				}
-			}
-		}
+		date > 1939.1.1
 	}
 	
 	abort_when_not_enabled = yes
@@ -45,14 +29,109 @@ GER_collaboration_on_NOR = {
 	ai_strategy = {
 		type = operative_operation
 		operation = operation_collaboration_government
-		value = 1200
-		operation_target = NOR
+		value = 9999
+		operation_target = SOV
 	}
 	
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
 		value = 1000
-		mission_target = NOR
+		mission_target = SOV
 	}
+
+	ai_strategy = {
+		type = operation_equipment_priority
+		value = 100
+	}
+
+}
+#渗透同盟国
+GER_Infiltrate_the_Allies = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		has_war = yes
+		date < 1941.1.1
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = SOV
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = ENG
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = USA
+	}
+
+}
+#准备巴巴罗萨
+GER_Prepare_Barbarossa = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		date > 1941.1.1
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 5000
+		mission_target = SOV
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = SOV
+		num_operatives = 1
+		state = 808 #里加
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = SOV
+		num_operatives = 1
+		state = 206 #明斯克
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = SOV
+		num_operatives = 1
+		state = 202 #基辅
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = operation_infiltrate_armed_forces_army
+		value = 2000
+		mission_target = SOV
+	}
+
 }

@@ -1,0 +1,204 @@
+ideas = {
+
+	country = {
+
+		IAR_GER_Iron_Blood_Mythology_idea = {
+			picture = GER_youdeng_zhongzu
+			allowed = {
+				always = no
+			}
+			cancel = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#生产
+				production_factory_max_efficiency_factor = 0.25
+				industrial_capacity_factory = 0.5
+				industrial_capacity_dockyard = 0.5
+				#战斗
+				#---伤害
+				army_attack_against_major_factor = 0.1
+				army_defence_against_major_factor = 0.1
+				army_breakthrough_against_major_factor = 0.1
+				#--肉
+				army_strength_factor = 0.25
+				army_org_factor = 0.25
+				experience_loss_factor = -1
+				experience_gain_factor = 1
+				#人力
+				conscription = 0.05
+				#空军
+				air_superiority_efficiency = 0.25
+				air_range_factor = 0.5
+				custom_modifier_tooltip = IAR_AI_supply_tt
+			}
+		}
+
+		IAR_GER_lebensraum_ideas = {
+			picture = GER_REI_the_nsdap
+			allowed = {
+				always = no
+			}
+			cancel = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#间谍
+				intelligence_agency_defense = 10
+				enemy_operative_capture_chance_factor = 0.1
+				enemy_operative_detection_chance = 10
+				#生产
+				production_factory_max_efficiency_factor = 0.5
+				industrial_capacity_factory = 0.5
+				industrial_capacity_dockyard = 0.5
+				#陆
+				army_morale_factor = 1
+				supply_consumption_factor = -0.5
+				supply_node_range = 10
+				#人力
+				conscription = 0.1
+				#空军
+				air_weather_penalty = -1
+				air_mission_efficiency = 1
+				air_detection = 1
+				custom_modifier_tooltip = IAR_Axis_AI_ideas_tt
+			}
+			
+		}
+
+		
+		
+		#台风行动
+		GER_Typhoon_Operation = {
+			picture = generic_attack_soviet_union
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				attrition = -1
+				winter_attrition_factor = -1
+				acclimatization_cold_climate_gain_factor = 1
+				supply_node_range = 1
+			}
+			targeted_modifier = {
+				tag = SOV    
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		#蓝色行动
+		GER_Fall_Blau = {
+			picture = generic_attack_soviet_union
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				attrition = -1
+				supply_node_range = 1
+				terrain_penalty_reduction = 0.5
+			}
+			targeted_modifier = {
+				tag = SOV    
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		#春醒行动
+		GER_Spring_Awakening = {
+			picture = generic_attack_soviet_union
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -1
+				attrition = -1
+				supply_node_range = 1
+				army_attack_against_major_factor = 0.1
+				army_defence_against_major_factor = 0.1
+				army_breakthrough_against_major_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = SOV    
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		#阿登反击战
+		GER_Ardennen_offensive = {
+			picture = GER_Ardennen_offensive
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -1
+				attrition = -1
+				supply_node_range = 1
+			}
+			targeted_modifier = {
+				tag = ENG    
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = USA    
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		#阿登反击战-英美debuff
+		GER_Ardennen_offensive_ally = {
+			picture = GER_Ardennen_offensive_ally
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = GER    
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				breakthrough_bonus_against = -0.1
+			}
+		}
+
+
+	}
+}

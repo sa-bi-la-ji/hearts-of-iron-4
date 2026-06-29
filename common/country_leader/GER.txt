@@ -1,4 +1,5 @@
 leader_traits = {
+    # 元首特质
     鼓舞人心的演说家 = {
         random = no
         sprite = 1
@@ -50,5 +51,41 @@ leader_traits = {
 			defense_bonus_against = 0.03
 			breakthrough_bonus_against = 0.03
 		}
+    }
+
+    # 装甲伯爵
+	Theorist_GER_erich_von_manstein = {
+        random = no
+		sprite = 7
+        experience_gain_army = 0.05
+        cat_mobile_warfare_cost_factor = -0.05
+        new_mobile_warfare_mastery_gain_factor = 0.15
+        army_attack_factor = 0.05
+        breakthrough_factor = 0.05
+        army_armor_attack_factor = 0.1
+		army_armor_defence_factor = 0.1
+		planning_speed = 0.15
+        max_planning = 0.05
+        terrain_penalty_reduction = 0.05
+        coordination_bonus = 0.05
+		initiative_factor = 0.05
+        supply_consumption_factor = -0.05
+        out_of_supply_factor = 0.10
+	}
+
+    # 装甲之父
+    Theorist_GER_heinz_guderian = {
+        random = no
+        sprite = 14
+        experience_gain_army = 0.2
+        cat_mobile_warfare_cost_factor = -0.15
+        new_mobile_warfare_mastery_gain_factor = 0.25
+        breakthrough_factor = 0.10
+        army_armor_attack_factor = 0.15
+		army_armor_defence_factor = 0.15
+        mechanized_attack_factor = 0.10
+		mechanized_defence_factor = 0.10
+        army_speed_factor = 0.15
+        initiative_factor = 0.15
     }
 }

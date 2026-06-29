@@ -1,3 +1,99 @@
+#严禁造制造唐氏装备
+GER_dont_manufacturing_hajimi_equipment = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_plane_airframe
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane #侦察机不唐但是先不造
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = maritime_patrol_plane
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = armored_car_equipment
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armored_car
+		value = 0
+	}
+}
+
+#AI大哥我求求你了不要造装甲车
+GER_no_armored_car = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = armored_car_equipment
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armored_car
+		value = 0
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armored_car
+		value = 0
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armored_car
+		value = 0
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = armored_car
+		value = 0
+	}
+}
+
 GER_unit_production = {
 	allowed = {
 		original_tag = GER

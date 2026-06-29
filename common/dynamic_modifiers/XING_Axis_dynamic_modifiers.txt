@@ -1,0 +1,25 @@
+XING_GER_Iron_Blood_Mythology = {
+
+	enable = { always = yes }
+
+	remove_trigger = {
+		always = no
+	}
+
+	icon = GFX_GER_youdeng_zhongzu
+
+	army_attack_factor = GER_1_army_attack_factor
+	army_core_attack_factor = GER_1_army_core_attack_factor
+	army_defence_factor = GER_1_army_defence_factor
+	army_core_defence_factor = GER_1_army_core_defence_factor
+	breakthrough_factor = GER_1_breakthrough_factor
+	army_strength_factor = GER_1_army_strength_factor
+	army_speed_factor = GER_1_army_speed_factor
+	production_factory_efficiency_gain_factor = GER_1_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = GER_1_production_factory_max_efficiency_factor
+	industrial_capacity_dockyard = GER_1_industrial_capacity_dockyard
+	industrial_capacity_factory = GER_1_industrial_capacity_factory
+	air_agility_factor = 0.02
+	air_attack_factor = 0.02
+	air_defence_factor = 0.02
+}

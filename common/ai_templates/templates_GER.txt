@@ -1,1138 +1,580 @@
-armored_GER = {
+GER_infantry = {
 
-	available_for = {
-		GER
-	}
-	
-	role = armor
-	
-	upgrade_prio = {
-		base = 2
-
-		modifier = {
-			factor = 4
-			OR = {
-				has_tech = basic_medium_tank
-				has_tech = basic_medium_tank_chassis
-			}
-		}
-		
-		modifier = {
-			factor = 2
-			OR = {
-				has_tech = main_battle_tank
-				has_tech = main_battle_tank_chassis
-			}
-		}
-	}
-
-	light_armor_early_GER = {
-		division_names_group = GER_Arm_01
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 2
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-				mot_recon = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				light_armor = 7
-				motorized = 5
-			}
-		}
-	}
-
-	medium_armor_early_GER = {
-		division_names_group = GER_Arm_01
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 3
-				OR = {
-					has_tech = basic_medium_tank
-					has_tech = basic_medium_tank_chassis
-				}
-			}
-		}
-
-		# this is a stop-gap towards medium tanks, if deployed dont upgrade to medium tanks until we burn out our light tanks
-		can_upgrade_in_field = {
-			has_equipment = { light_tank_chassis < 600 } 
-		}
-
-		target_template = {
-			
-			support = {
-				engineer = 1
-				mot_recon = 1
-				anti_tank = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				medium_armor = 2
-				light_armor = 4
-				motorized = 6
-			}
-		}
-	}
-
-	medium_armor_mid_GER = {
-		division_names_group = GER_Arm_01
-		upgrade_prio = {
-			base = 1
-			
-			modifier = {
-				factor = 4
-				OR = {
-					has_tech = basic_medium_tank
-					has_tech = basic_medium_tank_chassis
-				}
-				date > 1939.10.1
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				engineer = 1
-				mot_recon = 1
-				artillery = 1
-				maintenance_company = 1
-				logistics_company = 1
-			}
-			
-			regiments = {
-				medium_armor = 7 #remove sp
-				motorized = 5
-				mot_anti_air_brigade = 1
-				mot_anti_tank_brigade = 1
-			}
-		}
-	}
-
-	medium_armor_late_GER = {
-		division_names_group = GER_Arm_01
-		upgrade_prio = {
-			base = 1
-			
-			modifier = {
-				factor = 5
-				OR = {
-					has_tech = improved_medium_tank
-					has_tech = improved_medium_tank_chassis
-				}
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				engineer = 1
-				armored_car_recon = 1
-				artillery = 1
-				maintenance_company = 1
-				logistics_company = 1
-			}
-			
-			regiments = {
-				medium_armor = 7 #remove sp
-				motorized = 5
-				mot_anti_air_brigade = 1
-				mot_anti_tank_brigade = 1
-			}
-		}
-	}
-
-	modern_armor_default_GER = {
-
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					has_tech = main_battle_tank
-					has_tech = main_battle_tank_chassis
-				}
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				engineer = 1
-				mot_recon = 1
-				maintenance_company = 1
-				logistics_company = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				modern_armor = 8
-				mechanized = 6
-				medium_sp_artillery_brigade = 1
-				#super_heavy_armor = 1
-			}
-		}
-	}
-}
-
-
-
-panzergrenadier_GER = {
-
-	available_for = {
-		GER
-	}
-	
-	role = mechanized_assault
-	front_role_override = offence
-	
-	upgrade_prio = {
-		base = 0
-		modifier = {
-			add = 2
-			is_special_project_completed = sp:sp_land_flamethrower_tank
-		}
-		modifier = {
-			factor = 4
-			OR = {
-				has_tech = basic_medium_tank
-				has_tech = basic_medium_tank_chassis
-			}
-		}
-		
-	}
-
-	panzergrenadier_early_GER = {
-		division_names_group = GER_MEC_01
-		upgrade_prio = {
-			base = 2
-		}
-
-		# this is a stop-gap towards medium tanks, if deployed dont upgrade to medium tanks until we burn out our light tanks
-		can_upgrade_in_field = {
-			has_equipment = { light_tank_chassis < 600 } 
-		}
-
-		target_template = {
-			
-			support = {
-				assault_engineer = 1
-				light_tank_recon = 1
-				anti_tank = 1
-				artillery = 1
-				light_flame_tank = 1
-			}
-			
-			regiments = {
-				light_armor = 4
-				motorized = 6
-			}
-		}
-	}
-
-	panzergrenadier_early_medium_tanks_GER = {
-		division_names_group = GER_MEC_01
-		upgrade_prio = {
-			base = 1
-			
-			modifier = {
-				factor = 3
-				OR = {
-					has_tech = basic_medium_tank
-					has_tech = basic_medium_tank_chassis
-				}
-				date > 1940.1.1
-			}
-		}
-
-		# this is a stop-gap towards medium tanks, if deployed dont upgrade to medium tanks until we burn out our light tanks
-		can_upgrade_in_field = {
-			has_equipment = { light_tank_chassis < 600 } 
-		}
-
-		target_template = {
-			
-			support = {
-				assault_engineer = 1
-				light_tank_recon = 1
-				anti_tank = 1
-				artillery = 1
-				light_flame_tank = 1
-			}
-			
-			regiments = {
-				medium_armor = 2
-				light_armor = 4
-				motorized = 6
-			}
-		}
-	}
-
-	panzergrenadier_mid_GER = {
-		division_names_group = GER_MEC_01
-		upgrade_prio = {
-			base = 1
-			
-			modifier = {
-				factor = 4
-				OR = {
-					has_tech = basic_medium_tank
-					has_tech = basic_medium_tank_chassis
-				}
-				date > 1943.1.1
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				assault_engineer = 1
-				light_tank_recon = 1
-				maintenance_company = 1
-				artillery = 1
-				light_flame_tank = 1
-			}
-			
-			regiments = {
-				medium_armor = 6
-				mechanized = 6
-			}
-		}
-	}
-
-	panzergrenadier_late_GER = {
-		division_names_group = GER_MEC_01
-		upgrade_prio = {
-			base = 1
-			
-			modifier = {
-				factor = 5
-				OR = {
-					has_tech = improved_medium_tank
-					has_tech = improved_medium_tank_chassis
-				}
-				date > 1944.6.1
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				assault_engineer = 1
-				light_tank_recon = 1
-				maintenance_company = 1
-				artillery = 1
-				medium_flame_tank = 1
-			}
-			
-			regiments = {
-				medium_armor = 7 #remove sp
-				mechanized = 6
-				mot_anti_air_brigade = 1
-				mot_anti_tank_brigade = 1
-			}
-		}
-	}
-
-	panzergrenadier_modern_GER = {
-		division_names_group = GER_MEC_01
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					has_tech = main_battle_tank
-					has_tech = main_battle_tank_chassis
-				}
-				date > 1945.6.1
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				assault_engineer = 1
-				light_tank_recon = 1
-				maintenance_company = 1
-				artillery = 1
-				medium_flame_tank = 1
-			}
-			
-			regiments = {
-				modern_armor = 8
-				mechanized = 6
-				medium_sp_artillery_brigade = 1
-			}
-		}
-	}
-}
-
-garrison_GER = {
-
-	available_for = {
-		GER
-	}
-	
-	role = garrison
-	
-	upgrade_prio = {
-		factor = 1
-
-		modifier = {
-			factor = 100
-			NOT = { ai_has_role_template = garrison }
-			OR = {
-				has_completed_focus = GER_anschluss
-
-				any_country = {
-					is_justifying_wargoal_against = ROOT
-				}
-			}
-		}
-	}
-
-
-	garrison_GER = {
-
-		reinforce_prio = 0
-		custom_icon = 7
-	
-		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-			}
-			
-			regiments = {
-				infantry = 6
-			}
-		}
-	}
-}
-	
-infantry_GER = {
-
-	available_for = {
-		GER
+	available_for = { 
+		GER 
 	}
 	
 	role = infantry
-	
+
 	upgrade_prio = {
-		base = 4
-
-		modifier = {
-			factor = 4
-			NOT = {
-				has_tech = basic_medium_tank
-			}
-			NOT = {
-				has_tech = basic_medium_tank_chassis
-			}
-		}
+		base = 5
 	}
 
-
-	infantry_default_GER = {
+	infantry_default = {
 	
 		upgrade_prio = {
-			base = 2
+			base = 5
 		}
-		
 		target_template = {
-			
 			support = {
 				engineer = 1
-			#	recon = 1
-			#	field_hospital = 1
-			#	anti_tank = 1
-			#	anti_air = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				infantry = 9
-				artillery_brigade = 1
-			}
-		}
-	}
-
-	infantry_Upgrade_GER = { # Adding some AA to infantry Divs
-	
-		upgrade_prio = {
-			base = 1
-			modifier = {
-				factor = 0
-				date < 1938.1.1
-			}
-
-			modifier = {
-				factor = 3
-				date > 1938.1.1
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-			#	recon = 1
-			#	field_hospital = 1
-			#	anti_tank = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
 				anti_air = 1
-				artillery = 1
+				rangers_support = 1 #游骑兵支援连
 			}
-			
 			regiments = {
-				infantry = 9
-				artillery_brigade = 1
-			}
-		}
-	}
-
-
-	infantry_Upgrade_2_GER = {
-	
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 0
-				date < 1939.9.1
-			}
-
-			modifier = {
-				factor = 4
-				has_war_with_major = yes
-				date > 1939.9.1
-			}
-		}
-
-		can_upgrade_in_field = {
-			has_equipment = {artillery_equipment > 500}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-			#	recon = 1
-			#	field_hospital = 1
-			#	anti_tank = 1
-				anti_air = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				infantry = 9
-				artillery_brigade = 1
-			}
-		}
-	}
-
-	infantry_Upgrade_3_GER = {
-	
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 0
-				date < 1940.9.1
-			}
-
-			modifier = {
-				factor = 5
-				has_war_with_major = yes
-				date > 1940.9.1
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-			#	recon = 1
-			#	field_hospital = 1
-				anti_tank = 1
-				anti_air = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				infantry = 9
-				artillery_brigade = 2
+				infantry = 12
+				artillery_brigade = 4
+				anti_tank_brigade = 2
+				anti_air_brigade = 1
 			}
 		}
 	}
 }
 
-mountaineers_GER = {
+GER_mechanized_armor = {
 
-	available_for = {
-		GER
+	available_for = { 
+		GER 
 	}
-	
-	role = mountaineers
-	
+
+	role = armor
+
 	upgrade_prio = {
-		factor = 2
-
+		base = 5
 		modifier = {
-			factor = 0
-			NOT = {
-				has_tech = tech_mountaineers
-			}
+			add = 10
+			has_tech = mechanised_infantry
 		}
 	}
-	
-	mountaineers_default_GER = {
-	
-		upgrade_prio = {
-			base = 2
-		}
 
+	mechanized_armor_default = {
+
+		upgrade_prio = {
+			base = 20
+		}
+		
 		target_template = {
-			
+
 			support = {
-				engineer = 1
-				artillery = 1
-				anti_tank = 1
-				logistics_company = 1
-				recon = 1
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
 			}
 			
 			regiments = {
-				mountaineers = 8
-				artillery_brigade = 3
+				mechanized = 9
+				medium_armor = 9
+				heavy_tank_destroyer_brigade = 2
 			}
 		}
 	}
 }
 
-marines_GER = {
+GER_mechanized_heavy_armor = {
 
-	available_for = {
-		GER
+	available_for = { 
+		GER 
 	}
-	
+
+	role = heavy_armor
+
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			add = 10
+			has_tech = mechanised_infantry
+		}
+	}
+
+	mechanized_heavy_armor_default = {
+
+		upgrade_prio = {
+			base = 20
+		}
+		
+		target_template = {
+
+			support = {
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
+			}
+			
+			regiments = {
+				mechanized = 9
+				heavy_armor = 9
+				heavy_tank_destroyer_brigade = 2
+			}
+		}
+	}
+}
+
+
+GER_amphibious_armor = {
+
+	available_for = { 
+		GER 
+	}
+
 	role = marines
-	
-	upgrade_prio = {
-		base = 2
 
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			add = 10
+			has_tech = amphibious_mechanized_infantry
+		}
+	}
+
+	marines_default = {
+
+		upgrade_prio = {
+			base = 20
+		}
+		
+		target_template = {
+
+			support = {
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
+			}
+			
+			regiments = {
+				amphibious_mechanized = 8
+				amphibious_medium_armor = 8
+				heavy_tank_destroyer_brigade = 2
+			}
+		}
+	}
+
+
+}
+
+
+#---------------------------------------------------特殊
+#国防军步兵
+GER_wehrmacht_infantry = {
+
+	available_for = { 
+		GER 
+	}
+	
+	role = wehrmacht_infantry
+
+	upgrade_prio = {
+		base = 5
 		modifier = {
 			factor = 0
 			NOT = {
-				has_tech = marines
+				or = {
+					has_global_flag = GER_Hard_Mode
+					has_global_flag = GER_Nightmare_Mode
+				}
 			}
 		}
 	}
 
-	marine_default_GER = {
+	wehrmacht_infantry_default = {
 	
 		upgrade_prio = {
-			base = 2
+			base = 5
 		}
-
 		target_template = {
-			
 			support = {
 				engineer = 1
-				artillery = 1
-				anti_tank = 1
-				logistics_company = 1
-				recon = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				anti_air = 1
+				rangers_support = 1 #游骑兵支援连
 			}
-			
 			regiments = {
-				marine = 9
-				artillery_brigade = 2
-				
+				wehrmacht_infantry = 12
+				artillery_brigade = 4
+				anti_tank_brigade = 2
+				anti_air_brigade = 1
 			}
 		}
 	}
 }
 
+#国防军中坦
+GER_wehrmacht_mechanized_armor = {
 
-paratroopers_GER = {
-
-	available_for = {
-		GER
+	available_for = { 
+		GER 
 	}
-	
-	role = paratroopers
-	
-	upgrade_prio = {
-		base = 2
 
+	role = wehrmacht_armor
+
+	upgrade_prio = {
+		base = 5
 		modifier = {
 			factor = 0
 			NOT = {
-				has_tech = paratroopers
+				or = {
+					has_global_flag = GER_Hard_Mode
+					has_global_flag = GER_Nightmare_Mode
+				}
 			}
 		}
 	}
 
-	paratrooper_default_GER = {
-	
-		upgrade_prio = {
-			base = 2
-		}
+	wehrmacht_mechanized_armor_default = {
 
+		upgrade_prio = {
+			base = 20
+		}
+		
 		target_template = {
-			
+
 			support = {
-				engineer = 1
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
 			}
 			
 			regiments = {
-				paratrooper = 3
+				wehrmacht_mechanized = 9
+				wehrmacht_armor = 9
+				heavy_tank_destroyer_brigade = 2
+			}
+		}
+	}
+}
+
+#国防军重坦
+GER_wehrmacht_heavy_mechanized_armor = {
+
+	available_for = { 
+		GER 
+	}
+
+	role = wehrmacht_heavy_armor
+
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				or = {
+					has_global_flag = GER_Hard_Mode
+					has_global_flag = GER_Nightmare_Mode
+				}
 			}
 		}
 	}
 
-	paratrooper_early_GER = {
-	
-		upgrade_prio = {
-			base = 1 
-			modifier = {
-				factor = 3
-				date > 1940.1.1 
-			}
-		}
+	wehrmacht_mechanized_heavy_armor_default = {
 
+		upgrade_prio = {
+			base = 20
+		}
+		
 		target_template = {
-			
+
 			support = {
-				engineer = 1
-				artillery = 1
-				anti_tank = 1
-				anti_air = 1
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
 			}
 			
 			regiments = {
-				paratrooper = 4
-			}
-		}
-	}
-
-
-	paratrooper_mid_GER = {
-	
-		upgrade_prio = {
-			base = 1 
-			modifier = {
-				factor = 4
-				date > 1942.1.1 
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				engineer = 1
-				artillery = 1
-				anti_tank = 1
-				anti_air = 1
-			}
-			
-			regiments = {
-				paratrooper = 6
+				wehrmacht_mechanized = 9
+				wehrmacht_heavy_tank = 9
+				heavy_tank_destroyer_brigade = 2
 			}
 		}
 	}
 }
 
 
+#W现坦
+GER_wehrmacht_modern_mechanized_armor = {
 
-anti_armor_GER = {
-
-	available_for = {
-		GER
+	available_for = { 
+		GER 
 	}
-	
-	role = anti_armor
-	
+
+	role = wehrmacht_modern_armor
+
 	upgrade_prio = {
-		base = 2
-
-		modifier = {
-			factor = 3
-			# has_war_with = SOV
-			any_enemy_country = {
-				ROOT = {
-					estimated_intel_max_armor = {
-						tag = PREV
-						value > 20
-					}
-				}
-			}
-		}
-
+		base = 5
 		modifier = {
 			factor = 0
-			NOT = { has_tech = interwar_antitank }
+			NOT = {
+				or = {
+					has_global_flag = GER_Hard_Mode
+					has_global_flag = GER_Nightmare_Mode
+				}
+			}
 		}
 	}
-	
-	infantry_anti_armor_GER = {
-		custom_icon = 28
-		division_names_group = GER_Inf_01
-	
+
+	wehrmacht_mechanized_modern_armor_default = {
+
 		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 2
-				has_tech = interwar_antitank
-
-				#has_war_with = SOV
-				#any_enemy_country = {
-				#	ROOT = {
-				#		estimated_intel_max_armor = {
-				#			tag = PREV
-				#			value > 20
-				#		}
-				#	}
-				#}
-			}
+			base = 20
 		}
 		
 		target_template = {
+
+			support = {
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
+			}
 			
+			regiments = {
+				wehrmacht_mechanized = 10
+				wehrmacht_modern_tank = 9
+				modern_tank_destroyer_brigade = 3
+			}
+		}
+	}
+}
+
+#SS步兵
+GER_SS_infantry = {
+
+	available_for = { 
+		GER 
+	}
+	
+	role = SS_infantry
+
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				or = {
+					has_global_flag = GER_Hard_Mode
+					has_global_flag = GER_Nightmare_Mode
+				}
+			}
+		}
+	}
+
+	SS_infantry_default = {
+	
+		upgrade_prio = {
+			base = 5
+		}
+		target_template = {
 			support = {
 				engineer = 1
-				recon = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				anti_air = 1
+				rangers_support = 1 #游骑兵支援连
+			}
+			regiments = {
+				ss_bbs = 12
+				artillery_brigade = 4
+				anti_tank_brigade = 2
+				anti_air_brigade = 1
+			}
+		}
+	}
+}
+
+#SS中
+GER_SS_mechanized_armor = {
+
+	available_for = { 
+		GER 
+	}
+
+	role = SS_armor
+
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				or = {
+					has_global_flag = GER_Hard_Mode
+					has_global_flag = GER_Nightmare_Mode
+				}
+			}
+		}
+	}
+
+	SS_mechanized_armor_default = {
+
+		upgrade_prio = {
+			base = 20
+		}
+		
+		target_template = {
+
+			support = {
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
+			}
+			
+			regiments = {
+				ss_jxh = 9
+				ss_tk = 9
+				heavy_tank_destroyer_brigade = 2
+			}
+		}
+	}
+}
+
+#SS重
+GER_SS_heavy_mechanized_armor = {
+
+	available_for = { 
+		GER 
+	}
+
+	role = SS_heavy_armor
+
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				or = {
+					has_global_flag = GER_Hard_Mode
+					has_global_flag = GER_Nightmare_Mode
+				}
+			}
+		}
+	}
+
+	SS_mechanized_heavy_armor_default = {
+
+		upgrade_prio = {
+			base = 20
+		}
+		
+		target_template = {
+
+			support = {
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
+			}
+			
+			regiments = {
+				ss_jxh = 9
+				ss_ztk = 9
+				heavy_tank_destroyer_brigade = 2
+			}
+		}
+	}
+}
+
+#SS现坦
+GER_SS_modern_mechanized_armor = {
+
+	available_for = { 
+		GER 
+	}
+
+	role = SS_modern_armor
+
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				or = {
+					has_global_flag = GER_Hard_Mode
+					has_global_flag = GER_Nightmare_Mode
+				}
+			}
+		}
+	}
+
+	SS_mechanized_heavy_armor_default = {
+
+		upgrade_prio = {
+			base = 20
+		}
+		
+		target_template = {
+
+			support = {
+				armored_engineer = 1
+				field_hospital = 1 
+				logistics_company = 1 #后勤连
+				medium_flame_tank = 1
+				light_tank_recon = 1 
+			}
+			
+			regiments = {
+				ss_jxh = 10
+				ss_xdtk = 9
+				modern_tank_destroyer_brigade = 3
+			}
+		}
+	}
+}
+
+
+#大老鼠
+GER_big_mouse = {
+
+	available_for = { 
+		GER 
+	}
+
+	role = big_mouse
+
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				has_global_flag = GER_Nightmare_Mode
+			}
+		}
+	}
+
+	GER_big_mouse_default = {
+
+		upgrade_prio = {
+			base = 20
+		}
+		
+		target_template = {
+
+			support = {
+				armored_engineer = 1
 				field_hospital = 1
-				#anti_tank = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				infantry = 6
-				anti_tank_brigade = 1
-				#artillery_brigade = 1
-			}
-		}
-
-		replace_at_match = 1.5  # I.e., no
-		replace_with = light_tank_anti_armor_GER
-		target_min_match = 0.5
-	}
-	
-	light_tank_anti_armor_GER = {
-		custom_icon = 28
-		division_names_group = GER_MOT_02
-	
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 3
-
-				has_tech = antitank1
-				OR = {
-					has_tech = basic_light_td
-					has_design_based_on = light_tank_destroyer_chassis
-				}
-				#if = {
-				#	limit = {
-				#		NOT = { has_dlc = "No Step Back" }
-				#	}
-				#	has_tech = basic_light_td
-				#}
-				#has_war_with = SOV
-				#any_enemy_country = {
-				#	ROOT = {
-				#		estimated_intel_max_armor = {
-				#			tag = PREV
-				#			value > 32
-				#		}
-				#	}
-				#}
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-				mot_recon = 1
-				anti_tank = 1
-			}
-			
-			regiments = {
-				light_tank_destroyer_brigade = 1
-				motorized = 6
-				mot_artillery_brigade = 1
-			}
-		}
-		
-		replace_at_match = 1.5  # I.e., no
-		replace_with = medium_tank_anti_armor_GER
-		target_min_match = 0.5
-	}
-	
-	medium_tank_anti_armor_GER = {
-		custom_icon = 28
-		division_names_group = GER_MOT_02
-	
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 4
-
-				has_tech = antitank2
-				OR = {
-					has_tech = basic_medium_td
-					has_design_based_on = medium_tank_destroyer_chassis
-				}
-
-				#if = {
-				#	limit = {
-				#		NOT = { has_dlc = "No Step Back" }
-				#	}
-				#	has_tech = basic_medium_td
-				#}
-				#has_war_with = SOV
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 35
-						}
-					}
-				}
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				engineer = 1
-				mot_recon = 1
-				maintenance_company = 1
+				medium_flame_tank = 1
+				land_cruiser = 1
 				logistics_company = 1
-				anti_tank = 1
 			}
 			
 			regiments = {
-				medium_tank_destroyer_brigade = 1
-				motorized = 6
-				mot_artillery_brigade = 1
+				wehrmacht_mechanized = 5
+				ss_jxh = 5
+				amphibious_heavy_armor = 10
 			}
 		}
 	}
 }
-
-
-motorized_GER = {
-
-	available_for = {
-		GER
-	}
-	
-	role = motorized
-	
-	upgrade_prio = {
-		base = 2
-
-		modifier = {
-			factor = 0
-			NOT = { has_tech = interwar_antitank }
-		}
-	}
-	
-	basic_motorized_infantry_GER = {
-		division_names_group = GER_MOT_02
-		
-		upgrade_prio = {
-			base = 2
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-				mot_recon = 1
-				field_hospital = 1
-				anti_tank = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				motorized = 9
-			}
-		}
-	}
-
-	mid_motorized_infantry_GER = {
-		division_names_group = GER_MOT_02
-		
-		upgrade_prio = {
-			base = 1
-			modifier = {
-				factor = 2 
-				OR = {
-					has_tech = basic_medium_tank
-					has_tech = basic_medium_tank_chassis
-				}
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-				mot_recon = 1
-				field_hospital = 1
-				anti_tank = 1
-				artillery = 1
-			}
-
-			regiments = {
-				motorized = 9
-				medium_sp_artillery_brigade = 1
-				medium_tank_destroyer_brigade = 1
-			}
-		}
-	}
-
-	late_motorized_infantry_GER = {
-		division_names_group = GER_MOT_02
-		
-		upgrade_prio = {
-			base = 1
-			modifier = {
-				factor = 0 
-				NOT = { has_dlc = "Gotterdammerung"}
-			}
-			modifier = {
-				factor = 3 
-				OR = {
-					has_tech = basic_medium_tank
-					has_tech = basic_medium_tank_chassis
-				}
-				date > 1941.1.1
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				assault_engineer = 1
-				mot_recon = 1
-				field_hospital = 1
-				anti_tank = 1
-				artillery = 1
-			}
-
-			regiments = {
-				medium_armor = 2
-				motorized = 9
-				light_sp_artillery_brigade = 1
-				light_tank_destroyer_brigade = 1
-			}
-		}
-	}
-	
-	
-}
-
-# Non-complete list of sub-units
-# 不完整的子单位列表
-
-# REGIMENTS:
-# 团级单位:
-# - infantry
-# - 步兵
-# - light_armor
-# - 轻型装甲
-# - medium_armor
-# - 中型装甲
-# - heavy_armor
-# - 重型装甲
-# - super_heavy_armor
-# - 超重型装甲
-# - modern_armor
-# - 现代装甲
-# - cavalry
-# - 骑兵
-# - motorized
-# - 机动化
-# - mechanized
-# - 机械化
-# - marine
-# - 海军陆战队
-# - mountaineers
-# - 山地部队
-# - paratrooper
-# - 伞兵
-# - artillery_brigade
-# - 炮兵旅
-# - anti_air_brigade
-# - 防空旅
-# - anti_tank_brigade
-# - 反坦克旅
-# - light_tank_destroyer_brigade
-# - 轻型坦克歼击车旅
-# - medium_tank_destroyer_brigade
-# - 中型坦克歼击车旅
-# - heavy_tank_destroyer_brigade
-# - 重型坦克歼击车旅
-# - super_heavy_tank_destroyer_brigade
-# - 超重型坦克歼击车旅
-# - modern_tank_destroyer_brigade
-# - 现代坦克歼击车旅
-# - light_sp_anti_air_brigade
-# - 轻型自走防空旅
-# - light_sp_artillery_brigade
-# - 轻型自走炮旅
-
-# SUPPORT:
-# 支援:
-# - engineer
-# - 工兵
-# - recon
-# - 侦察
-# - signal_company
-# - 通信连
-# - maintenance_company
-# - 维修连
-# - artillery
-# - 炮兵
-# - anti_air
-# - 防空
-# - anti_tank
-# - 反坦克
-# - field_hospital
-# - 野战医院
-# - logistics_company
-# - 后勤连
-# - military_police
-# - 宪兵
-# - rocket_artillery
-# - 火箭炮

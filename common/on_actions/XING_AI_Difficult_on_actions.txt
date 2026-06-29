@@ -1,0 +1,59 @@
+on_actions = {
+	#AI德国难度选择
+    on_startup = {
+        effect = { 
+
+            every_country = {
+                limit = {
+                    is_ai = no
+                    or = {
+                        original_tag = SOV
+                        original_tag = USA
+                        original_tag = ENG
+                    }
+                }
+                country_event = Axis_ai.1
+            }
+        }
+	}
+
+
+	on_startup = {
+        effect = {
+            if = {
+                limit = {
+                    SOV = {
+                        is_ai = no
+                    }
+                    or = {
+                        ENG = {
+                            is_ai = yes
+                        }
+                        USA = {
+                            is_ai = yes
+                        }
+                    }
+                }
+                SOV = {
+                    country_event = Ai_event.1
+                }
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
